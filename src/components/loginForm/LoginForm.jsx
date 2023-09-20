@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import style from"./LoginForm.module.css"
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+
 
 const LoginForm = () => {
    const [email, setEmail] = useState("")
@@ -38,10 +37,7 @@ const LoginForm = () => {
  onChange={(e) => setPassword(e.target.value)}
  required
  />
- 
- 
-  
-    <VisibilityIcon className={style.icon}/>
+
     
  
  </div>
