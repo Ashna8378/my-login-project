@@ -4,12 +4,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 
 const LoginForm = () => {
-  // Initialize state with values from localStorage, or empty strings if none are found
   const [email, setEmail] = useState(() => localStorage.getItem("email") || "");
   const [password, setPassword] = useState(() => localStorage.getItem("password") || "");
 
   useEffect(() => {
-    // Load saved values from localStorage on component mount
+    console.log("Loading values from localStorage:", localStorage.getItem("email"), localStorage.getItem("password"));
     const savedEmail = localStorage.getItem("email");
     const savedPassword = localStorage.getItem("password");
     if (savedEmail) setEmail(savedEmail);
@@ -18,10 +17,9 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Save values to localStorage
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
-    console.log(email, password);
+    console.log("Stored values:", localStorage.getItem("email"), localStorage.getItem("password"));
   };
 
   return (
